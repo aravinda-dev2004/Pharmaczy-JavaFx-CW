@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icet.controller.SalesDetailsFormController">
+   <children>
+      <Pane layoutX="20" layoutY="20" prefHeight="594" prefWidth="960" styleClass="glass-pane">
+         <children>
+            <!-- Navigation Sidebar -->
+            <Pane layoutX="10" layoutY="10" prefHeight="574" prefWidth="238" styleClass="form-container">
+               <children>
+                  <Label layoutX="44.0" layoutY="51.0" prefHeight="59.0" prefWidth="186.0" styleClass="title-label" text="Pharmaczy" />
+                  <Button layoutX="6.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Dashboard" />
+                  <Button layoutX="6.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Medicine" />
+                  <Button layoutX="6.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Supplier" />
+                  <Button layoutX="7.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnInventoryOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Inventory" />
+                  <Button layoutX="7.0" layoutY="369.0" mnemonicParsing="false" onAction="#btnSalesBillingOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Sales &amp; Billing" />
+                  <Button layoutX="7.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnSaleDetailsOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Sale Details" />
+               </children>
+            </Pane>
+            <!-- End Navigation Sidebar -->
+
+            <Label layoutX="546.0" layoutY="52.0" prefHeight="53.0" prefWidth="149.0" text="Sale Details ">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSaleDetailsID" layoutX="381.0" layoutY="120.0" promptText="Sale Detals ID" styleClass="text-field" />
+            <TextField fx:id="txtBatchID" layoutX="700.0" layoutY="120.0" promptText="Batch ID" styleClass="text-field" />
+            <TextField fx:id="txtSubTotal" layoutX="700.0" layoutY="154.0" promptText="SubTotal" styleClass="text-field" />
+            <TableView fx:id="tblSalesDetails" layoutX="276.0" layoutY="279.0" prefHeight="290.0" prefWidth="676.0">
+               <columns>
+                  <TableColumn fx:id="colSaleDetailsID" prefWidth="96.0" text="Sale Details ID" />
+                  <TableColumn fx:id="colSaleId" prefWidth="93.0" text="Sale ID" />
+                  <TableColumn fx:id="colBatchId" prefWidth="105.0" text="Batch ID" />
+                  <TableColumn fx:id="colQuantitySold" prefWidth="112.0" text="Quantity Sold" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="121.0" text="Unit Price" />
+                  <TableColumn fx:id="colSubTotal" prefWidth="146.0" text="Sub Total" />
+               </columns>
+            </TableView>
+            <Button layoutX="405.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnAddSaleDetailsOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="ADD" />
+            <Button layoutX="512.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnUpdateSaleDetailsOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="UPDATE" />
+            <Button layoutX="620.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnDeleteSaleDetailsOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="DELETE" />
+            <Button layoutX="728.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnSearchSaleDetailsOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="SEARCH" />
+            <TextField fx:id="txtQtySold" layoutX="380.0" layoutY="153.0" promptText="Quantity Sold" styleClass="text-field" />
+            <TextField fx:id="txtSaleID" layoutX="541.0" layoutY="120.0" promptText="Sale ID" styleClass="text-field" />
+            <TextField fx:id="txtUnitAmount" layoutX="540.0" layoutY="154.0" promptText="Unit Price" styleClass="text-field" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

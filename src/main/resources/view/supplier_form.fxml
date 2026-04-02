@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icet.controller.SupplierController">
+   <children>
+      <Pane layoutX="20" layoutY="20" prefHeight="594" prefWidth="960" styleClass="glass-pane">
+         <children>
+            <!-- Navigation Sidebar -->
+            <Pane layoutX="10" layoutY="10" prefHeight="574" prefWidth="238" styleClass="form-container">
+               <children>
+                  <Label layoutX="43.0" layoutY="47.0" prefHeight="59.0" prefWidth="186.0" styleClass="title-label" text="Pharmaczy " />
+                  <Button layoutX="6.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Dashboard" />
+                  <Button layoutX="6.0" layoutY="229.0" mnemonicParsing="false" onAction="#btnMedicineOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Medicine" />
+                  <Button layoutX="6.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Supplier" />
+                  <Button layoutX="7.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnInventoryOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Inventory" />
+                  <Button layoutX="7.0" layoutY="369.0" mnemonicParsing="false" onAction="#btnSalesBillingOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Sales &amp; Billing" />
+                  <Button layoutX="7.0" layoutY="417.0" mnemonicParsing="false" onAction="#btnSaleDetailsOnAction" prefHeight="34.0" prefWidth="223.0" styleClass="form-button" text="Sale Details" />
+               </children>
+            </Pane>
+            <!-- End Navigation Sidebar -->
+
+            <Label layoutX="569.0" layoutY="49.0" prefHeight="53.0" prefWidth="103.0" text="Supplier">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSupplierID" layoutX="381.0" layoutY="120.0" promptText="Supplier ID" styleClass="text-field" />
+            <TextField fx:id="txtSupplierContact" layoutX="700.0" layoutY="120.0" promptText="Contact Person" styleClass="text-field" />
+            <TextField fx:id="txtAddress" layoutX="700.0" layoutY="155.0" promptText="Address" styleClass="text-field" />
+            <TableView fx:id="tblSupplier" layoutX="250.0" layoutY="290.0" prefHeight="280.0" prefWidth="700.0">
+               <columns>
+                  <TableColumn fx:id="colSupplierId" prefWidth="69.0" text="Supplier ID" />
+                  <TableColumn fx:id="colSupName" prefWidth="103.0" text="Supplier Name" />
+                  <TableColumn fx:id="colContactPerson" prefWidth="101.0" text="Contact Person" />
+                  <TableColumn fx:id="colPhoneNo" prefWidth="88.0" text="Phone Number" />
+                  <TableColumn fx:id="colEmail" prefWidth="199.0" text="Email" />
+                  <TableColumn fx:id="colAddress" prefWidth="188.0" text="Address" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSupplierName" layoutX="540.0" layoutY="120.0" promptText="Supplier Name" styleClass="text-field" />
+            <Button layoutX="405.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnAddSupplierOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="ADD" />
+            <Button layoutX="512.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnUpdateSupplierOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="UPDATE" />
+            <Button layoutX="620.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnDeleteSupplierOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="DELETE" />
+            <Button layoutX="728.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnSearchSupplierOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="form-button" text="SEARCH" />
+            <TextField fx:id="txtPhone" layoutX="380.0" layoutY="153.0" promptText="Phone NO:" styleClass="text-field" />
+            <TextField fx:id="txtEmail" layoutX="540.0" layoutY="155.0" promptText="Email" styleClass="text-field" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

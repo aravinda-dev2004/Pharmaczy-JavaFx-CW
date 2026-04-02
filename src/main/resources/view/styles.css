@@ -1,0 +1,49 @@
+.root {
+    -fx-background-image: url('https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?q=80&w=1974&auto=format&fit=crop');
+    -fx-background-size: cover;
+}
+
+.glass-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 20;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 0);
+}
+
+.form-container {
+     -fx-background-color: rgba(0, 0, 0, 0.3);
+     -fx-background-radius: 20;
+}
+
+.form-button {
+    -fx-background-color: #d5e8e7;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+}
+
+.form-button:hover {
+    -fx-background-color: #b0c4c2;
+}
+
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 10;
+    -fx-prompt-text-fill: #555;
+    -fx-text-fill: black;
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 2);
+}
+
+.body-text {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-style: italic;
+}
